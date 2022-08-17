@@ -17,6 +17,7 @@ public class Player2Actions : MonoBehaviour
     public AudioClip PunchWoosh;
     public AudioClip KickWoosh;
     public static bool HitsP2 = false;
+    public static bool FlyingJumpP2 = false;
 
 
     // Start is called before the first frame update
@@ -152,12 +153,19 @@ public class Player2Actions : MonoBehaviour
     public void FlipUp()
     {
         Player1.transform.Translate(0, FlipSpeed, 0);
-       // Player1.transform.Translate(0.1f, 0, 0);
+        FlyingJumpP2 = true;
+
     }
     public void FlipBack()
     {
         Player1.transform.Translate(0, FlipSpeed, 0);
-        //Player1.transform.Translate(-0.1f, 0, 0);
+        FlyingJumpP2 = true;
+
+    }
+
+    public void IdleSpeed()
+    {
+        FlyingJumpP2 = false;
     }
 
     public void KickWooshSound()

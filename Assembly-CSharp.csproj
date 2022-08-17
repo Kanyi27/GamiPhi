@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B6725C2C-8EC5-CC59-2FE5-2338F2F069DA}</ProjectGuid>
+    <ProjectGuid>{CE3C95BA-8A8C-2C51-3483-1C7692384967}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,14 +61,31 @@
     <Compile Include="Assets\My Scripts\Player2Actions.cs" />
     <Compile Include="Assets\My Scripts\P2MoveRestrict.cs" />
     <Compile Include="Assets\My Scripts\Player2Move.cs" />
+    <Compile Include="Assets\My Scripts\SaveScript.cs" />
     <Compile Include="Assets\My Scripts\Player1Move.cs" />
     <Compile Include="Assets\My Scripts\P2JumpScript.cs" />
     <Compile Include="Assets\My Scripts\P1JumpScript.cs" />
     <Compile Include="Assets\My Scripts\Player1Trigger.cs" />
+    <Compile Include="Assets\My Scripts\HealthBars.cs" />
     <Compile Include="Assets\My Scripts\P1MoveRestrict.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
+    <Compile Include="Assets\My Scripts\LevelSpawn.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
+    <None Include="Assets\JMO Assets\Cartoon FX\CartoonFX Free.txt" />
+    <None Include="Assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
     <None Include="Assets\My assets\Shadows.shader" />
+    <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

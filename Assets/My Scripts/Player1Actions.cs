@@ -10,10 +10,13 @@ public class Player1Actions : MonoBehaviour
     private AnimatorStateInfo Player1Layer0;
     public float PunchSlideAmt = 2f;
     private bool HeavyMoving = false;
+    private bool HeavyReact = false;
+    public float HeavyReactAmt = 4f;
     private AudioSource MyPlayer;
     public AudioClip PunchWoosh;
     public AudioClip KickWoosh;
     public static bool Hits = false;
+    public static bool FlyingJumpP1 = false;
 
 
     // Start is called before the first frame update
@@ -44,6 +47,22 @@ public class Player1Actions : MonoBehaviour
             }
         }
 
+        //Heavy React Slide
+        if (HeavyReact == true)
+        {
+            if (Player1Move.FacingRight == true)
+            {
+
+
+                Player1.transform.Translate(-HeavyReactAmt * Time.deltaTime, 0, 0);
+            }
+            if (Player1Move.FacingLeft == true)
+            {
+
+
+                Player1.transform.Translate(HeavyReactAmt * Time.deltaTime, 0, 0);
+            }
+        }
 
         //Listen to the Animator
         Player1Layer0 = Anim.GetCurrentAnimatorStateInfo(0);
@@ -122,15 +141,28 @@ public class Player1Actions : MonoBehaviour
         
     }
 
+    public void HeavyReaction()
+    {
+        StartCoroutine(HeavySlide());
+
+    }
+
     public void FlipUp()
     {
         Player1.transform.Translate(0, JumpSpeed, 0);
-        Player1.transform.Translate(0.1f, 0, 0);
+        FlyingJumpP1 = true;
+        
     }
     public void FlipBack()
     {
         Player1.transform.Translate(0, JumpSpeed, 0);
-        Player1.transform.Translate(-0.1f, 0, 0);
+        FlyingJumpP1 = true;
+
+    }
+
+    public void IdleSpeed()
+    {
+        FlyingJumpP1 = false;
     }
 
     public void KickWooshSound()
@@ -154,6 +186,14 @@ public class Player1Actions : MonoBehaviour
         HeavyMoving = true;
         yield return new WaitForSeconds(0.05f);
         HeavyMoving = false;
+
+    }
+
+    IEnumerator HeavySlide()
+    {
+        HeavyReact = true;
+        yield return new WaitForSeconds(0.3f);
+        HeavyReact = false;
 
     }
 }
