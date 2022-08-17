@@ -369,8 +369,11 @@
 "Assets/My Scripts/Player1Move.cs"
 "Assets/My Scripts/Player1Trigger.cs"
 "Assets/My Scripts/Player2Actions.cs"
+"Assets/My Scripts/Player2ActionsAI.cs"
 "Assets/My Scripts/Player2Move.cs"
+"Assets/My Scripts/Player2MoveAI.cs"
 "Assets/My Scripts/Player2Trigger.cs"
+"Assets/My Scripts/Player2TriggerAI.cs"
 "Assets/My Scripts/SaveScript.cs"
 -langversion:9.0
 

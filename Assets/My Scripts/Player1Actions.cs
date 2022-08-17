@@ -177,8 +177,10 @@ public class Player1Actions : MonoBehaviour
         MyPlayer.Play();
     }
 
+    public void RandomAttack()
+    {
 
-
+    }
 
 
     IEnumerator PunchSlide()

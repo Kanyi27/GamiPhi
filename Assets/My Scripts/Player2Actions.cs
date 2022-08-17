@@ -180,9 +180,10 @@ public class Player2Actions : MonoBehaviour
         MyPlayer.Play();
     }
 
+    public void RandomAttack()
+    {
 
-
-
+    }
 
     IEnumerator PunchSlide()
     {
